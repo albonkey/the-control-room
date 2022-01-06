@@ -1,0 +1,11 @@
+@import '../../styles/abstracts/_variables.scss';
+@import '../../styles/abstracts/_mixins.scss';
+
+.add-product{
+  @include component;
+  display: flex;
+  flex-direction: column;
+}
+.add-product-body{
+  display: flex;
+}

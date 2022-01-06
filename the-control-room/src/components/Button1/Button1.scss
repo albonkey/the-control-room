@@ -1,0 +1,25 @@
+@import '../../styles/abstracts/_variables.scss';
+@import '../../styles/abstracts/_mixins.scss';
+
+.button1{
+  padding: 15px;
+  margin: 5px;
+  border-radius: 5px;
+
+  background-color: color(gunmetal, base);
+  color: color(white, base);
+
+  text-align: center;
+  cursor: pointer;
+
+  transition: .2s;
+  
+  &:hover{
+    opacity: 0.9;
+  }
+}
+
+.button1-lighter{
+  background-color: color(white, darker);
+  color: color(navy-blue, base);
+}

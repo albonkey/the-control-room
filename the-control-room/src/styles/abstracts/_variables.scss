@@ -1,0 +1,41 @@
+
+//Colors
+$palettes: (
+    white: (
+      base: white,
+      darker: #f2f2f2,
+    ),
+    navy-blue: (
+        base:   #18121E,
+        lighter: #49375c
+    ),
+    rusty-red: (
+        base:    #233237,
+    ),
+    gunmetal: (
+        base:    #984B43,
+    ),
+    warm-yellow: (
+        base:   #EAC67A,
+
+    )
+);
+
+@function color($color, $tone){
+
+    @if map-has-key($palettes,$color){
+        $color: map-get($palettes,$color);
+
+            @if map-has-key($color,$tone){
+                $tone: map-get($color,$tone);
+                @return $tone;
+            }
+
+            @warn "unknown tone `#{$tone}` in color";
+            @return null;
+    }
+
+    @warn "unknown color `#{$color}` in palette";
+    @return null;
+
+}
